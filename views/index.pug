@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p This is a cool board for cool kids
+  ul
+    each element in  messages
+       li #{element.user}: #{element.text}
+       | #{element.added}
+      
+  a(href="/new") New Message
